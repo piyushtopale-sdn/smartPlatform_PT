@@ -37,6 +37,7 @@ module.exports = {
       remotes: {
         componentA: 'componentA@http://localhost:3001/remoteEntry.js',
         componentB: 'componentB@http://localhost:3002/remoteEntry.js',
+        userComponentA: 'userComponentA@http://localhost:3003/remoteEntry.js',
       },
       shared: {
         react: { singleton: true, eager: true },

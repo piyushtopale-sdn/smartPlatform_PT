@@ -41,7 +41,25 @@ services:
       - /app/node_modules
     environment:
       - HOST=0.0.0.0
-      - BROWSER=none   
+      - BROWSER=none  
+
+  user-service-a:
+    build: ./smartPods/custom-pod/backend/user-service-a
+    ports:
+      - "4002:4002" 
+
+  user-component-a:
+    build: ./smartPods/custom-pod/frontend/user-component-a
+    ports:
+      - "3003:3003"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./smartPods/custom-pod/frontend/user-component-a:/app
+      - /app/node_modules
+    environment:
+      - HOST=0.0.0.0
+      - BROWSER=none         
 
   shell:
     build: ./shell
