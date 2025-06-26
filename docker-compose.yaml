@@ -1,0 +1,57 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27019:27017"
+
+  service-a:
+    build: ./smartPods/login-pod/backend/service-a
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongo
+
+  service-b:
+    build: ./smartPods/login-pod/backend/service-b
+    ports:
+      - "4001:4001"
+
+  component-a:
+    build: ./smartPods/login-pod/frontend/component-a
+    ports:
+      - "3001:3001"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./smartPods/login-pod/frontend/component-a:/app
+      - /app/node_modules
+    environment:
+      - HOST=0.0.0.0
+      - BROWSER=none
+
+  component-b:
+    build: ./smartPods/login-pod/frontend/component-b
+    ports:
+      - "3002:3002"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./smartPods/login-pod/frontend/component-b:/app
+      - /app/node_modules
+    environment:
+      - HOST=0.0.0.0
+      - BROWSER=none   
+
+  shell:
+    build: ./shell
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./shell:/app
+      - /app/node_modules
+    environment:
+      - HOST=0.0.0.0
+      - BROWSER=none      
