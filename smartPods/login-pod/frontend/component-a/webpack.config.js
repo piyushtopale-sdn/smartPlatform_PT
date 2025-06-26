@@ -41,6 +41,7 @@ module.exports = {
             exposes: {
                 './App': './src/App',
                 './Login': './src/Login',
+                './Register': './src/Register',
             },
             shared: {
                 react: { singleton: true, eager: true, requiredVersion: '^18.0.0' },
