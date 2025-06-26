@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const LoginComponent = React.lazy(() => import('componentA/Login'));
 const RegisterComponent = React.lazy(() => import('componentA/Register'));
 const AppRemote = React.lazy(() => import('componentB/App'));
+const UserRemote = React.lazy(() => import('userComponentA/App'));
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/" element={<LoginComponent />} />
            <Route path="/register" element={<RegisterComponent />} />
           <Route path="/dashboard" element={<AppRemote />} />
+          <Route path="/user" element={<UserRemote />} />
         </Routes>
       </Router>
     </Suspense>
