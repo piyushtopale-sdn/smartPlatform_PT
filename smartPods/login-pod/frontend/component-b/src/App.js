@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      📊 Dashboard (From component-b) 
+      <h1>📊 Dashboard (From component-b) </h1>
     </div>
   );
 }
