@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment } from 'shell/store'; // 👈 optional: reuse host's actions
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
 
   const login = async () => {
     try {
@@ -28,12 +33,17 @@ export default function Login() {
 
   return (
     <>
-      <div style={{ padding: 20 }}>
+      <div>
         <h2>Login/Register</h2>
         <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} /><br /><br />
         <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} /><br /><br />
         <button onClick={login}>Login</button>
         <button onClick={register} style={{ marginLeft: 10 }}>Register</button>
+        <p>
+          Count in remote: {count}
+          <button onClick={() => dispatch(increment())}>Increment Store Count</button>
+          <button onClick={() => navigate('/host')}>Navigate to host route</button>
+        </p>
       </div>
     </>
   );

@@ -34,6 +34,10 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: 'shell',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './store': './src/store', // 👈 expose store
+      },
       remotes: {
         componentA: 'componentA@http://localhost:3001/remoteEntry.js',
         componentB: 'componentB@http://localhost:3002/remoteEntry.js',
@@ -43,6 +47,7 @@ module.exports = {
         react: { singleton: true, eager: true },
         'react-dom': { singleton: true, eager: true },
         'react-router-dom': { singleton: true, eager: true },
+        redux: { singleton: true },
       },
     }),
     new HtmlWebpackPlugin({
