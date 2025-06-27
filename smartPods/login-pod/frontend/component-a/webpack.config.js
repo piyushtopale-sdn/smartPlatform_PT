@@ -43,10 +43,14 @@ module.exports = {
                 './Login': './src/Login',
                 './Register': './src/Register',
             },
+            remotes: {
+                shell: 'shell@http://localhost:3000/remoteEntry.js',
+            },
             shared: {
                 react: { singleton: true, eager: true, requiredVersion: '^18.0.0' },
                 'react-dom': { singleton: true, eager: true, requiredVersion: '^18.0.0' },
                 'react-router-dom': { singleton: true, eager: true },
+                redux: { singleton: true },
             },
         }),
         new HtmlWebpackPlugin({

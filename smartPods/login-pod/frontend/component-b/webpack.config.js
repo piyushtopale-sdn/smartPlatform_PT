@@ -49,6 +49,7 @@ module.exports = {
         react: { singleton: true, eager: true },
         'react-dom': { singleton: true, eager: true },
         'react-router-dom': { singleton: true, eager: true },
+        redux: { singleton: true },
       },
     }),
     new HtmlWebpackPlugin({
