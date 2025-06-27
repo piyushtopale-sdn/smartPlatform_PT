@@ -1,0 +1,59 @@
+.host-container {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.host-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.host-container h2 {
+    margin-bottom: 20px;
+}
+
+.host-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.host-link:hover {
+    text-decoration: underline;
+}
+
+.host-count {
+    font-size: 18px;
+    margin: 16px 0;
+    color: #444;
+}
+
+.host-button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.host-button:hover {
+    background-color: #c82333;
+}

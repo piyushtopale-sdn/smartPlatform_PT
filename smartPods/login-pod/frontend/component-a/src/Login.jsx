@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment } from 'shell/store'; // 👈 optional: reuse host's actions
+import './Login.css';
 
 export default function Login() {
 
@@ -25,21 +26,33 @@ export default function Login() {
   };
 
   return (
-    <>
-      <div style={{ padding: 30 }}>
-        <h2>Login</h2>
-        <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} /><br /><br />
-        <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} /><br /><br />
-        <button onClick={login}>Login</button>
-        <Link to="/register" style={{ marginLeft: 10, textDecoration: 'none', color: 'blue' }}>
-          Register
+    <div className="login-container">
+      <h2>Login</h2>
+      <input
+        className="login-input"
+        placeholder="Email"
+        value={email}
+        onChange={e => setEmail(e.target.value)}
+      /><br /><br />
+      <input
+        className="login-input"
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={e => setPassword(e.target.value)}
+      /><br /><br />
+      <button className="login-button" onClick={login}>Login</button>
+      <Link to="/register" className="register-link">
+        Register
+      </Link>
+      <p className="count-section">
+        Count in component-a : {count}
+        <br />
+        <button onClick={() => dispatch(increment())}>Increment Store Count</button>
+        <Link to="/host" className="register-link">
+          Host
         </Link>
-         <p>
-          Count in remote: {count}
-          <button onClick={() => dispatch(increment())}>Increment Store Count</button>
-          <button onClick={() => navigate('/host')}>Navigate to host route</button>
-        </p>
-        </div>
-    </>
+      </p>
+    </div>
   );
 }
