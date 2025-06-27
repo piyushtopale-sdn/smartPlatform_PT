@@ -16,7 +16,7 @@ export default function Login() {
 
   const login = async () => {
     try {
-      const res = await axios.post('http://localhost:4000/api/login', { email, password });
+      const res = await axios.post('http://localhost:4005/service-a/api/login', { email, password });
       alert('Login Success! Token: ' + res.data.token);
       navigate('/dashboard')
     } catch (err) {
