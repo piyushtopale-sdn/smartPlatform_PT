@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-
 import { useSelector, useDispatch } from 'react-redux';
 import { increment } from 'shell/store'; // 👈 optional: reuse host's actions
 
@@ -27,18 +26,20 @@ export default function Login() {
 
   return (
     <>
-      <div>
-        <h2>Login/Register</h2>
+      <div style={{ padding: 30 }}>
+        <h2>Login</h2>
         <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} /><br /><br />
         <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} /><br /><br />
         <button onClick={login}>Login</button>
-        <button onClick={register} style={{ marginLeft: 10 }}>Register</button>
-        <p>
+        <Link to="/register" style={{ marginLeft: 10, textDecoration: 'none', color: 'blue' }}>
+          Register
+        </Link>
+         <p>
           Count in remote: {count}
           <button onClick={() => dispatch(increment())}>Increment Store Count</button>
           <button onClick={() => navigate('/host')}>Navigate to host route</button>
         </p>
-      </div>
+        </div>
     </>
   );
 }
