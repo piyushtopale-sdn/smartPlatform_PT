@@ -1,9 +1,9 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+import express from 'express';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcrypt';
 
 const app = express();
 app.use(cors());
@@ -20,6 +20,11 @@ const userSchema = new mongoose.Schema({
   password: String
 });
 const User = mongoose.model('User', userSchema);
+
+app.get('/', (req, res) => {
+  console.log("I am here");
+  res.send('Service-a running');
+});
 
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;

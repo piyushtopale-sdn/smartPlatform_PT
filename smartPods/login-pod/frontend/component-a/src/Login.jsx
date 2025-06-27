@@ -14,7 +14,7 @@ export default function Login() {
 
   const login = async () => {
     try {
-      const res = await axios.post('http://localhost:4000/api/login', { email, password });
+      const res = await axios.post('http://localhost:4005/service-a/api/login', { email, password });
       alert('Login Success! Token: ' + res.data.token);
       navigate('/dashboard');
     } catch (err) {
@@ -24,7 +24,7 @@ export default function Login() {
 
   const register = async () => {
     try {
-      await axios.post('http://localhost:4000/api/register', { email, password });
+      await axios.post('http://localhost:4005/service-a/api/register', { email, password });
       alert('Registered successfully');
     } catch (err) {
       alert('Registration Failed');
