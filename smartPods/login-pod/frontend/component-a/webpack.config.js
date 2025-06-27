@@ -41,6 +41,7 @@ module.exports = {
             exposes: {
                 './App': './src/App',
                 './Login': './src/Login',
+                './Register': './src/Register',
             },
             remotes: {
                 shell: 'shell@http://localhost:3000/remoteEntry.js',
