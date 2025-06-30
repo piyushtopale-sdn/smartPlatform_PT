@@ -4,10 +4,16 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
+import dotenv from 'dotenv';
+import connectDB from './config/db.config.js';
 
+dotenv.config();
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+
+connectDB();
+// console.log("env", process.env.MONGO_DB_URL);
 
 mongoose.connect('mongodb://mongo:27017/userdb', {
   useNewUrlParser: true,
