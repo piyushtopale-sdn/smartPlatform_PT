@@ -1,9 +1,15 @@
 import express from 'express';
 import cors from 'cors';
-const app = express();
-const PORT = 4001;
+import dotenv from 'dotenv';
+import connectDB from './config/db.config.js';
 
+dotenv.config();
+
+const PORT = 4001;
+const app = express();
 app.use(cors());
+connectDB();
+// console.log("env", process.env.MONGO_DB_URL);
 
 app.get('/api/info', (req, res) => {
   res.json({ message: "Welcome to the Dashboard!", stats: { users: 42, tasks: 17 } });

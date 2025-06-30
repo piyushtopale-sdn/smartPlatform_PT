@@ -11,11 +11,21 @@ services:
       - "4000:4000"
     depends_on:
       - mongo
+    volumes:
+    - ./smartPods/login-pod/backend/service-a:/app
+    - /app/node_modules
+    - ./.env:/app/.env 
+    command: npm run dev
 
   service-b:
     build: ./smartPods/login-pod/backend/service-b
     ports:
       - "4001:4001"
+    volumes:
+    - ./smartPods/login-pod/backend/service-b:/app
+    - /app/node_modules
+    - ./.env:/app/.env
+    command: npm run dev
 
   component-a:
     build: ./smartPods/login-pod/frontend/component-a
