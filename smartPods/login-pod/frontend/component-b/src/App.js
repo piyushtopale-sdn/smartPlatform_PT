@@ -22,9 +22,16 @@ function App() {
           <p>$5,290</p>
         </div>
       </div>
-      <Link to="/" className="login-link">
-        Login
-      </Link>
+      <div className="link-container">
+        <Link to="/" className="login-link">
+          Login
+        </Link>
+
+        <Link to="/user" className="login-link">
+          User Management
+        </Link>
+      </div>
+
     </div>
 
   );
