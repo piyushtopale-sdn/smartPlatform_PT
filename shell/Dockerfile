@@ -1,7 +1,8 @@
-FROM node:18
+FROM node:18 as build
 WORKDIR /app
 COPY . .
 RUN npm install
+RUN npm run build
 ENV BROWSER=none
 ENV HOST=0.0.0.0
 CMD ["npm", "start"]
