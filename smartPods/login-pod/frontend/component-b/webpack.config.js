@@ -9,12 +9,13 @@ module.exports = {
   devServer: {
     host: '0.0.0.0',
     port: 3002,
+    historyApiFallback: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
   },
   output: {
-    publicPath: 'auto',
+    publicPath: 'http://localhost:3002/',
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,

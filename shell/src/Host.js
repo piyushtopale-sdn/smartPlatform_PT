@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
-import { decrement } from './store';
+// import { decrement } from './store';
 import './Host.css';
 
 export default function Host() {
@@ -13,12 +13,12 @@ export default function Host() {
             {/* <h2>
                 <Link className="host-link" to={"/"}>Navigate to login</Link>
             </h2> */}
-            <div className="host-count">
+            {/* <div className="host-count">
                 Count: {count}
             </div>
             <button className="host-button" onClick={() => dispatch(decrement())}>
                 Decrement Store Count
-            </button>
+            </button> */}
             <div>
                 <Link to="/" className="login-link">
                     Login

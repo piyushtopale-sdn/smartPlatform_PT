@@ -11,7 +11,7 @@ module.exports = {
     historyApiFallback: true,
   },
   output: {
-    publicPath: 'auto',
+    publicPath: 'http://localhost:3000/',
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,

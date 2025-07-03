@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment } from 'shell/store'; // 👈 optional: reuse host's actions
+// import { increment } from 'shell/store'; // 👈 optional: reuse host's actions
 import './Login.css';
 
 export default function Login() {
@@ -12,8 +12,8 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
+  // const count = useSelector((state) => state.counter.value);
+  // const dispatch = useDispatch();
 
   const login = async () => {
     try {
@@ -45,14 +45,14 @@ export default function Login() {
       <Link to="/register" className="register-link">
         Register
       </Link>
-      <p className="count-section">
+      {/* <p className="count-section">
         Count in component-a : {count}
         <br />
         <button onClick={() => dispatch(increment())}>Increment Store Count</button>
         <Link to="/host" className="register-link">
           Host
         </Link>
-      </p>
+      </p> */}
     </div>
   );
 }

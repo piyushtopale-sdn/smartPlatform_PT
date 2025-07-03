@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkuser_component_a=self.webpackChunkuser_component_a||[]).push([[546],{546:(e,n,s)=>{s.r(n),s.d(n,{default:()=>a});var t=s(511),u=s.n(t);function a(){return u().createElement("div",{className:"App"},u().createElement("h1",null,"This is user component"))}}}]);
