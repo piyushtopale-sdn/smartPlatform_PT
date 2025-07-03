@@ -1,0 +1,22 @@
+{
+  "name": "smartplatform_pt",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+"scripts": {
+  "build": "concurrently \"npm run build:shell\" \"npm run build:componentA\" \"npm run build:componentB\" \"npm run build:userComponentA\"",
+ 
+  "build:shell": "cd shell && npm run build",
+  "build:componentA": "cd smartPods/login-pod/frontend/component-a && npm run build",
+  "build:componentB": "cd smartPods/login-pod/frontend/component-b && npm run build",
+  "build:userComponentA": "cd smartPods/custom-pod/frontend/user-component-a && npm run build",
+ 
+  "serve": "concurrently \"serve -s shell/dist -l 3000\" \"serve -s smartPods/login-pod/frontend/component-a/dist -l 3001\" \"serve -s smartPods/login-pod/frontend/component-b/dist -l 3002\" \"serve -s smartPods/custom-pod/frontend/user-component-a/dist -l 3003\" && xdg-open http://localhost:3000"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}

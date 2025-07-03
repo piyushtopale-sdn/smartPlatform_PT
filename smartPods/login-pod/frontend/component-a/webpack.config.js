@@ -14,7 +14,7 @@ module.exports = {
         },
     },
     output: {
-        publicPath: 'auto',
+        publicPath: "http://localhost:3001/",
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
