@@ -1,6 +1,8 @@
 # smartPlatform-MERN
 
-smartPlatform-MERN is a modular MERN stack project (MongoDB, Express.js, React, Node.js) designed for scalability, maintainability, and reusability. It adopts a pods-based architecture, where each feature is encapsulated as an independent micro frontend (pod). The platform includes a shared service layer, reusable UI components, centralized theming, and an efficient routing system. This structure enables seamless integration, faster development, and clear separation of concerns across features.
+smartPlatform-MERN is a modular MERN stack project (MongoDB, Express.js, React, Node.js) designed for scalability, maintainability, and reusability. It adopts a pods-based architecture, where each feature is encapsulated as an independent micro frontend (pod). 
+
+The platform includes a shared service layer, reusable UI components, centralized theming, and an efficient routing system. This structure enables seamless integration, faster development, and clear separation of concerns across features.
 
 ![Docker](https://img.shields.io/badge/containerized-Docker-blue)
 ![Node.js](https://img.shields.io/badge/backend-Express-green)
@@ -8,14 +10,14 @@ smartPlatform-MERN is a modular MERN stack project (MongoDB, Express.js, React, 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 # 📚 Table of Contents
+- [Tech Stack](#-tech-stack)
 - [Folder Structure](#-folder-structure)
 - [Key Highlights for MERN](#-key-highlights-for-mern)
 - [smartPods (Feature Modules)](#-smartpods-feature-modules)
 - [Get Started](#-get-started)
 - [Adding a New Pod](#-adding-a-new-pod)
-- [Contributing](#-contributing)
-- [Tech Stack](#-tech-stack)
 - [Sample .env File](#-sample-env-file)
+- [Contributing](#-contributing)
 <!-- - [Code Quality](#-code-quality) -->
 
 # 📁 Folder Structure
@@ -199,6 +201,15 @@ npm run serve
 - Expose frontend module path in the pod’s `webpack.config.js`
 - Update any necessary `.env` variables
 
+# 🔐 Sample .env File
+
+```
+NODE_ENV=development
+MONGO_URI=mongodb://localhost:27017/smartPlatform
+JWT_SECRET=your_jwt_secret
+API_GATEWAY_URL=http://localhost:3000
+```
+
 # 🤝 Contributing
 - Keep UI components generic and reusable
 - Encapsulate feature logic within pods
@@ -224,21 +235,6 @@ npm run serve
 
 </details>
 
-# 🛠️ Tech Stack
-- **Frontend:** React `18.x`, Webpack 5, Babel
-- **Backend:** Node.js `18.x`, Express.js
-- **Database:** MongoDB
-- **Architecture:** Microservice, Microfrontend (Module Federation), Pod-based
-- **Containerization:** Docker, Docker Compose
-
-# 🔐 Sample .env File
-
-```
-NODE_ENV=development
-MONGO_URI=mongodb://localhost:27017/smartPlatform
-JWT_SECRET=your_jwt_secret
-API_GATEWAY_URL=http://localhost:3000
-```
 
 <!-- # 🧹 Code Quality
 - Linting: ESLint 
