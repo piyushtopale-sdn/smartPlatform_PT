@@ -169,12 +169,12 @@ smartPlatform-MERN is a modular MERN stack project (MongoDB, Express.js, React, 
 
 # 🧩 Key Highlights for MERN:
 - **Frontend:** Inside `shell/src/` and individual pods like `login-pod/frontend/component-a`.
-- **Backend:** Inside `shared-services/` with shared `api-gateway` for backend service routing.
+- **Backend:** Inside `shared-services/` and individual pods like `login-pod/backend/service-a`.
 
 # 🧩 smartPods (Feature Modules)
-Pods are self-contained feature modules.  
-Each pod contains its own screens, navigation, and logic.  
-Example: The `login-pod` contains all authentication-related screens and navigation.
+- Pods are self-contained feature modules.  
+- Each pod contains its own screens, navigation, and logic.  
+- Example: The `login-pod` contains all authentication-related screens and navigation.
 
 # 🚀 Get Started
 
@@ -184,12 +184,13 @@ docker compose up --build
 
 # Stop the app
 docker compose down
-```
 
-<!-- 
-# Run Build
+# Build the app locally
 npm run build
--->
+
+# Serve the built app (requires 'serve' package)
+npm run serve
+```
 
 # 📦 Adding a New Pod
 - Create a new pod inside `smartPods/` (e.g., `smartPods/profile-pod/`)
@@ -203,17 +204,16 @@ npm run build
 - Encapsulate feature logic within pods
 
 # 🛠️ Tech Stack
-- **Frontend:** React, Webpack 5, Babel
-- **Backend:** Node.js, Express.js
+- **Frontend:** React `18.x`, Webpack 5, Babel
+- **Backend:** Node.js `18.x`, Express.js
 - **Database:** MongoDB
-- **Architecture:** Microfrontend (Module Federation), Pod-based
+- **Architecture:** Microservice, Microfrontend (Module Federation), Pod-based
 - **Containerization:** Docker, Docker Compose
 
 # 🔐 Sample .env File
 
 ```
 NODE_ENV=development
-PORT=5000
 MONGO_URI=mongodb://localhost:27017/smartPlatform
 JWT_SECRET=your_jwt_secret
 API_GATEWAY_URL=http://localhost:3000
