@@ -20,6 +20,7 @@ yarn.lock
 
 # misc
 .DS_Store
+.qodo/
 
 npm-debug.log*
 yarn-debug.log*

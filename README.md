@@ -202,6 +202,27 @@ npm run serve
 # 🤝 Contributing
 - Keep UI components generic and reusable
 - Encapsulate feature logic within pods
+- Follow consistent naming conventions across both frontend (React) and backend (Node.js):
+
+<details>
+<summary><strong>📌 Naming Conventions (React + Node.js)</strong></summary>
+
+| Type                  | Convention            | React Example        | Node.js Example         |
+|-----------------------|-----------------------|-----------------------|--------------------------|
+| Component / Class     | PascalCase            | `UserCard.jsx`        | `UserService.js`         |
+| Hook (React only)     | use + camelCase       | `useAuth.js`          | —                        |
+| Function / Method     | camelCase             | `handleClick()`       | `getUserData()`          |
+| Variable / Const      | camelCase             | `userName`            | `dbClient`               |
+| Constant              | UPPER_SNAKE_CASE      | `MAX_ATTEMPTS`        | `DB_URL`                 |
+| File Name             | kebab-case            | `user-profile.jsx`    | `user-service.js`        |
+| Folder Name           | kebab-case            | `user-profile/`       | `middleware/`            |
+| Redux Slice File      | camelCase             | `authSlice.js`        | —                        |
+| Route File            | kebab-case (plural)   | —                     | `users.js`               |
+| Environment Variable  | UPPER_SNAKE_CASE      | `REACT_APP_API_URL`   | `JWT_SECRET`             |
+| Middleware Function   | camelCase             | —                     | `authMiddleware()`       |
+| Config File           | kebab-case            | —                     | `db-config.js`           |
+
+</details>
 
 # 🛠️ Tech Stack
 - **Frontend:** React `18.x`, Webpack 5, Babel
