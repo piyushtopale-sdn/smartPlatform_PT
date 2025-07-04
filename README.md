@@ -20,6 +20,13 @@ The platform includes a shared service layer, reusable UI components, centralize
 - [Contributing](#-contributing)
 <!-- - [Code Quality](#-code-quality) -->
 
+# 🛠️ Tech Stack
+- **Frontend:** React `18.x`, Webpack 5, Babel
+- **Backend:** Node.js `18.x`, Express.js
+- **Database:** MongoDB
+- **Architecture:** Microfrontend (Module Federation), Pod-based
+- **Containerization:** Docker, Docker Compose
+
 # 📁 Folder Structure
 
 <details>
