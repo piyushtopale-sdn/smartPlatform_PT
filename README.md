@@ -1,6 +1,6 @@
 # smartPlatform-MERN
 
-SmartPlatformMERN is a modular MERN stack project (MongoDB, Express.js, React, Node.js) designed for scalability, maintainability, and reusability. It adopts a pods-based architecture, where each feature is encapsulated as an independent micro frontend (pod). The platform includes a shared service layer, reusable UI components, centralized theming, and an efficient routing system. This structure enables seamless integration, faster development, and clear separation of concerns across features.
+smartPlatform-MERN is a modular MERN stack project (MongoDB, Express.js, React, Node.js) designed for scalability, maintainability, and reusability. It adopts a pods-based architecture, where each feature is encapsulated as an independent micro frontend (pod). The platform includes a shared service layer, reusable UI components, centralized theming, and an efficient routing system. This structure enables seamless integration, faster development, and clear separation of concerns across features.
 
 ![Docker](https://img.shields.io/badge/containerized-Docker-blue)
 ![Node.js](https://img.shields.io/badge/backend-Express-green)
